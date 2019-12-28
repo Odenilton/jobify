@@ -1,0 +1,19 @@
+<%- include('../layouts/header') %>
+	
+	<h2>
+	Gerênciador: Categorias <br />
+	<a href="/admin">Voltar</a> |
+	<a href="/admin/categorias/nova">Novo</a>
+	</h2>
+
+	<% categorias.forEach(categoria => { %> 
+		<ul>
+			<li>
+				<%- categoria.categoria %> |
+				<a href="/admin/categorias/delete/<%- categoria.id %>">Deletar</a>|
+				<a href="/admin/categorias/edit/<%- categoria.id %>">Alterar</a>
+			</li>
+		</ul>
+	<% }) %>
+
+<%- include('../layouts/footer') %>

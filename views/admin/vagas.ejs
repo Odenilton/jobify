@@ -1,0 +1,19 @@
+<%- include('../layouts/header') %>
+	
+	<h2>
+	Gerênciador: Vagas <br />
+	<a href="/admin">Voltar</a> |
+	<a href="/admin/vagas/nova">Novo</a>
+	</h2>
+
+	<% vagas.forEach(vaga => { %> 
+		<ul>
+			<li>
+				<%- vaga.titulo %> |
+				<a href="/admin/vagas/delete/<%- vaga.id %>">Deletar</a> |
+				<a href="/admin/vagas/edit/<%- vaga.id %>">Alterar</a>
+			</li>
+		</ul>
+	<% }) %>
+
+<%- include('../layouts/footer') %>

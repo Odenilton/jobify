@@ -1,0 +1,16 @@
+<%- include('../layouts/header') %>
+	
+	<h2>
+		Nova Vaga <br />
+		<a href="/admin/categorias">Voltar</a>
+	</h2>
+
+	<form method="POST">
+		<label>Categoria:</label>
+		<input type="text" name="categoria" value="<%- categoria.categoria %>">
+		<br />
+
+		<input type="submit" value="Editar">
+	</form>
+
+<%- include('../layouts/footer') %>
