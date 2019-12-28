@@ -5,6 +5,8 @@ const bodyParser = require('body-parser')
 const sqlite = require('sqlite')
 const dbConnection = sqlite.open('banco.sqlite', { Promise })
 
+const port = process.env.PORT || 3000
+
 app.set('view engine', 'ejs')
 
 app.use(express.static('public'))
@@ -139,7 +141,7 @@ app.get('/curriculo', (req, res) => {
 
 init()*/
 
-app.listen(3000, (err) => {
+app.listen(port, (err) => {
 	if (err) {
 		console.log('Não foi possivél rodar servidor jobyfy')
 	} else {
